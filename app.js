@@ -1,3 +1,8 @@
+//Initial Declearation 
+const tryCount = setElementById('try-count');
+let count = parseFloat(tryCount.innerText);
+const pinSet = setElementById('pin-set');
+// Important Functions
 function generatRandom() {
     const random = Math.floor(Math.random() * 10000);
     const randomString = random + '';
@@ -11,13 +16,18 @@ function generatRandom() {
 function setElementById(elementId) {
     return document.getElementById(elementId);
 }
+// Event Handeller 
 document.getElementById('pin-generator-btn').addEventListener('click', function () {
     const pin = generatRandom();
     setElementById('display-pin').value = pin;
+    count = 3;
+    tryCount.innerText = count;
+    setElementById('success').style.display = 'none';
+    setElementById('failure').style.display = 'none';
+    pinSet.value = '';
 });
 setElementById('calc-body').addEventListener('click', function (event) {
     const value = event.target.innerText;
-    const pinSet = setElementById('pin-set');
     const pinSetValue = pinSet.value;
     if (isNaN(value)) {
         if(value === 'C'){
@@ -38,7 +48,6 @@ setElementById('calc-body').addEventListener('click', function (event) {
 setElementById('submit-btn').addEventListener('click', function(event){
     const randomPin = setElementById('display-pin').value;
     const setPin = setElementById('pin-set').value;
-    const tryCount = setElementById('try-count');
     console.log(randomPin, setPin);
     if(randomPin == ''){
         alert('Please Generate Pin');
@@ -46,7 +55,6 @@ setElementById('submit-btn').addEventListener('click', function(event){
         setElementById('success').style.display = 'block';
         setElementById('failure').style.display = 'none';
     }else{
-        let count = parseFloat(tryCount.innerText);
         count--;
         tryCount.innerText = count;
         if(count == 0){

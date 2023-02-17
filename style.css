@@ -26,6 +26,7 @@ body {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+    outline: none;
 }
 .generate-btn:focus{
     outline: none;
@@ -78,6 +79,7 @@ vertical-align: middle;
 margin-right: -4px;
 border-radius: 10px;
 cursor: pointer;
+outline:none;
 }
 .blink-me {
 color: #E0B612;
@@ -89,6 +91,11 @@ color: #E0B612;
     border-radius: 5px;
     background: #495BC3;
     color: #fff;
+    border:none;
+}
+.submit-btn:focus{
+    outline: none;
+    border:none;
 }
 .notify {
     color: #fff;
