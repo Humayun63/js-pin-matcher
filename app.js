@@ -25,6 +25,7 @@ document.getElementById('pin-generator-btn').addEventListener('click', function 
     setElementById('success').style.display = 'none';
     setElementById('failure').style.display = 'none';
     pinSet.value = '';
+    setElementById('submit-btn').classList.remove('disabled');
 });
 setElementById('calc-body').addEventListener('click', function (event) {
     const value = event.target.innerText;
@@ -58,9 +59,7 @@ setElementById('submit-btn').addEventListener('click', function(event){
         count--;
         tryCount.innerText = count;
         if(count == 0){
-            event.target.setAttribute('disabled', true);
-            event.target.style.backgroundColor = '#DDDDDD';
-            event.target.style.color = "#000";
+            event.target.classList.add('disabled');
         }
         setElementById('success').style.display = 'none';
         setElementById('failure').style.display = 'block';

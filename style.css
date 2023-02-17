@@ -97,6 +97,11 @@ color: #E0B612;
     outline: none;
     border:none;
 }
+.disabled{
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+}
 .notify {
     color: #fff;
     text-align: center;
