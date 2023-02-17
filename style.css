@@ -33,7 +33,7 @@ body {
 }
 
 input[type='text']{
-    background-color: #3D4153;
+    background-color: #3D4153!important;
     padding: 10px 0px;
     color: #ffffff;
     width: 80%;
@@ -41,6 +41,9 @@ input[type='text']{
     border: 2px solid #858299;
     height: 50px;
     padding: 10px;
+    font-size: 30px;
+    letter-spacing: 20px;
+    text-align: center;
 }
 input[type='text']:focus {
     background-color: #3D4153;
@@ -95,6 +98,7 @@ color: #E0B612;
     margin-top: 20px;
     border-radius: 15px;
     padding: 5px 20px;
+    display: none;
 }
 .notify-section{
     width: 35%;
